@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Morgan — Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="utsv.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Alex Morgan</a>
+
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <a href="#contact" class="nav-cta">Let's work together</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-left">
+    <p class="hero-eyebrow">Full stack web developer</p>
+
+    <h1 class="hero-headline">
+      Crafting<br>
+      digital work<br>
+      <em>worth keeping</em>
+    </h1>
+
+    <p class="hero-sub">
+      I design and build thoughtful products — from early concept through polished launch.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#work" class="btn-primary">View selected work</a>
+
+      <a href="about.html" class="btn-text">
+        About me
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <span class="hero-initials">AM</span>
+  </div>
+
+</section>
+
+<!-- WORK -->
+<section class="work" id="work">
+
+  <div class="work-header">
+    <div>
+      <p class="section-label">Selected work</p>
+      <h2 class="section-heading">Projects I'm proud to have shipped</h2>
+    </div>
+  </div>
+
+  <div class="work-grid">
+
+    <div class="project-card">
+      <div class="project-thumb t1">Bloom</div>
+
+      <div class="project-info">
+        <p class="project-cat">Mobile · Wellness</p>
+        <h3 class="project-title">Bloom — Habit Tracker</h3>
+        <p class="project-desc">
+          End-to-end product design for a mindfulness app.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb t2">Arc</div>
+
+      <div class="project-info">
+        <p class="project-cat">SaaS · B2B</p>
+        <h3 class="project-title">Arc — Analytics Dashboard</h3>
+        <p class="project-desc">
+          A clean interface for non-technical teams.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <div class="contact">
+
+    <div>
+      <p class="section-label">Get in touch</p>
+
+      <h2 class="section-heading">
+        Let's make something together
+      </h2>
+    </div>
+
+    <form class="contact-form" id="contactForm" action="utsv.php">
+
+      <div class="field">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Your name">
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="you@company.com">
+      </div>
+
+      <div class="field">
+        <label>Message</label>
+        <textarea id="message" placeholder="Write your message"></textarea>
+      </div>
+
+      <button class="submit-btn" type="submit">
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<footer>
+  <span>© 2026 Utsab Dhungana. All rights reserved.</span>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+<script src="utsv.js"></script>
+</html>
