@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+}
+
+header{
+    background:#003366;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+}
+
+nav a{
+    color:white;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:#f4f4f4;
+}
+
+.hero button{
+    padding:10px 20px;
+    margin-top:15px;
+}
+
+.about,
+#contact{
+    padding:50px 20px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input,
+textarea{
+    padding:10px;
+}
+
+button{
+    padding:10px;
+    cursor:pointer;
+}
