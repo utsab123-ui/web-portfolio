@@ -1,44 +1,657 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ABC School</title>
-    <link rel="stylesheet" href="school.css">
-    
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Institution | Excellence in Education</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e8e8ea",
+                        "primary-fixed": "#dae2ff",
+                        "on-secondary-fixed-variant": "#564500",
+                        "secondary-fixed": "#ffe07c",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1a1c1e",
+                        "surface": "#f9f9fc",
+                        "surface-container-low": "#f3f3f6",
+                        "on-primary-fixed-variant": "#0040a0",
+                        "surface-variant": "#e2e2e5",
+                        "secondary-container": "#fdd000",
+                        "on-background": "#1a1c1e",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-dim": "#dadadc",
+                        "on-secondary-container": "#6e5900",
+                        "secondary-fixed-dim": "#ecc200",
+                        "on-surface-variant": "#434653",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container": "#eeeef0",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "inverse-primary": "#b2c5ff",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c3c6d5",
+                        "primary-container": "#0046ad",
+                        "inverse-surface": "#2f3133",
+                        "inverse-on-surface": "#f0f0f3",
+                        "tertiary": "#343637",
+                        "on-secondary-fixed": "#231b00",
+                        "surface-bright": "#f9f9fc",
+                        "primary": "#00317e",
+                        "surface-tint": "#2559bf",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "surface-container-highest": "#e2e2e5",
+                        "background": "#f9f9fc",
+                        "on-tertiary-container": "#bdbebe",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#a5bdff",
+                        "on-primary-fixed": "#001847",
+                        "secondary": "#725c00",
+                        "tertiary-container": "#4b4d4d",
+                        "on-error": "#ffffff",
+                        "outline": "#737784",
+                        "on-tertiary-fixed": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Open Sans"],
+                        "body-md": ["Open Sans"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "label-lg": ["Open Sans"],
+                        "display-lg": ["Montserrat"],
+                        "label-sm": ["Open Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<link rel="stylesheet" href="school.css"/>
 </head>
-<body>
-
-<header>
-    <h1>ABC School</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Courses</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant shadow-sm h-20 flex items-center">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">Academic Institution</span>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-lg font-label-lg hover:scale-[1.02] active:scale-95 transition-all">Apply Now</button>
+</div>
 </header>
-
-<section class="hero">
-    <h2>Welcome to ABC School</h2>
-    <p>Building Bright Futures Through Quality Education.</p>
-    <button onclick="showMessage()">Learn More</button>
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVctjvZ0k0dd6XPNh4f6noMMn3LBHq8LnSMwuE_BaWd-sNNqdrHFub3B2Ido6jN0LNV1ZL5aodWQ6kTN9w6FKGfp5zTuHwL9qcDw0j29hl5CBEUYVfGQGDKCZO8byJkIVouGW-P4HCYJBHZW5BAb5c3doeD3tp6RK0NSaqitxYCj7Y6MA18QRZQFqV_rhrP1GePvCguO7t7PqxMIf6qUlZ1_F-cvV-AhJj3-jXOSbjAHiChnDBRfFR2Pr8mxEBFMuzXG9iGJFQSPI')"></div>
+<div class="absolute inset-0 bg-primary/40 backdrop-brightness-75"></div>
+<div class="relative z-10 text-center px-margin-mobile text-white max-w-3xl reveal active">
+<h1 class="font-display-lg-mobile text-display-lg-mobile mb-4 leading-tight">Welcome to Excellence</h1>
+<p class="font-body-lg text-body-lg mb-8 opacity-90">Empowering Minds for a Brighter Future through dedicated scholarship and character building.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-label-lg font-bold hover:scale-[1.05] transition-all">Apply Now</button>
+<button class="border-2 border-white text-white px-8 py-4 rounded-lg font-label-lg font-bold hover:bg-white hover:text-primary transition-all">Explore Programs</button>
+</div>
+</div>
 </section>
-
-<section class="about">
-    <h2>About Us</h2>
-    <p>ABC School provides quality education and modern learning facilities.</p>
+<!-- About School -->
+<section class="py-section-gap px-margin-mobile max-w-container-max mx-auto reveal">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div>
+<span class="text-primary font-label-lg uppercase tracking-widest block mb-2">Our Legacy</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">A Tradition of Academic Brilliance</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Founded with a vision to nurture global citizens, our institution combines traditional values with modern pedagogical techniques. We believe every student has a unique spark waiting to be ignited.</p>
+<div class="bg-surface-container-low p-6 border-l-4 border-primary rounded-r-lg">
+<p class="font-body-md italic text-on-surface-variant text-lg">"To empower students with knowledge, skills, and values that enable them to succeed in a rapidly changing global landscape."</p>
+<span class="block mt-2 font-bold text-primary">— Our Mission Statement</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-primary-container text-white p-8 rounded-xl text-center flex flex-col justify-center h-48">
+<span class="text-4xl font-bold counter" data-target="2500">0</span>
+<span class="font-label-sm">Students Enrolled</span>
+</div>
+<div class="bg-secondary-container text-on-secondary-container p-8 rounded-xl text-center flex flex-col justify-center h-48">
+<span class="text-4xl font-bold counter" data-target="150">0</span>
+<span class="font-label-sm">Faculty Members</span>
+</div>
+<div class="bg-surface-container-highest p-8 rounded-xl text-center flex flex-col justify-center h-48 col-span-2">
+<span class="text-4xl font-bold counter" data-target="75">0</span>
+<span class="font-label-sm">Awards Won</span>
+</div>
+</div>
+</div>
 </section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-    <form action="contact.php" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Message"></textarea>
-        <button type="submit">Send</button>
-    </form>
+<!-- Principal's Message -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile reveal">
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col md:flex-row">
+<div class="md:w-1/3">
+<img alt="Principal Portrait" class="w-full h-full object-cover aspect-square md:aspect-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbjUlzFgNVGDBPmvSPwkjtlOuShHo5qBogqJvL9iOG_O2EAX7bU-0Uaznr64HRoX_a16WkVSGilEwTp_Jj8ZVTW9dkU-kcYCGtZfrB20ShVJQGEe4eSNgsxWgm6zxpJ3i1lv4TbONMsJyCzvpVN9qQGqauRQCAntRaC1L6cBL5wo4Hz8dqLu5n6Jxgn8iohttW_9844rsHp7xXdYAScxeAVP0JicuDlqa2R-1au0kA3u-4ERhW1J2neTiO4_AIWXUY2stXyZ71wmg"/>
+</div>
+<div class="md:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary/20 text-6xl mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<h2 class="font-headline-md text-headline-md mb-4 text-on-surface">Leading with Vision</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 italic">"Our commitment to educational excellence goes beyond textbooks. We are dedicated to cultivating leaders of tomorrow who are not only academically proficient but also ethically grounded and socially responsible. I welcome you to join our vibrant academic community."</p>
+<div>
+<p class="font-headline-md text-primary m-0">Dr. Elizabeth Thorne</p>
+<p class="text-on-surface-variant font-label-lg">Principal, Academic Institution</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
+<!-- Why Choose Our School (Bento-style Grid) -->
+<section class="py-section-gap px-margin-mobile max-w-container-max mx-auto reveal">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg mb-4">Why Choose Us?</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">We provide a nurturing environment where students thrive through a balance of academic rigor and extracurricular exploration.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-white p-8 rounded-2xl border border-outline-variant card-lift transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">public</span>
+<h3 class="font-headline-md text-primary mb-2">Global Curriculum</h3>
+<p class="text-on-surface-variant">Integrating international standards with local context for holistic learning.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-outline-variant card-lift transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">school</span>
+<h3 class="font-headline-md text-primary mb-2">Expert Faculty</h3>
+<p class="text-on-surface-variant">Highly qualified educators dedicated to student success and mentorship.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-outline-variant card-lift transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">apartment</span>
+<h3 class="font-headline-md text-primary mb-2">Modern Infrastructure</h3>
+<p class="text-on-surface-variant">State-of-the-art facilities designed for safety and immersive learning.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-outline-variant card-lift transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">psychology</span>
+<h3 class="font-headline-md text-primary mb-2">Holistic Growth</h3>
+<p class="text-on-surface-variant">Focusing on sports, arts, and ethics alongside academic achievements.</p>
+</div>
+</div>
+</section>
+<!-- Academic Programs -->
+<section class="bg-primary py-section-gap text-white">
+<div class="max-w-container-max mx-auto px-margin-mobile reveal">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Academic Programs</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-primary-container p-1 rounded-2xl">
+<div class="bg-white text-on-surface p-8 rounded-xl h-full">
+<div class="text-primary font-bold mb-4">Foundation</div>
+<h3 class="font-headline-md text-headline-md mb-4">Primary Section</h3>
+<p class="text-on-surface-variant mb-6">Grades 1 to 5. Focusing on fundamental literacy, numeracy, and social exploration.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Creative Arts</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Language Skills</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Physical Education</li>
+</ul>
+</div>
+</div>
+<div class="bg-secondary-container p-1 rounded-2xl">
+<div class="bg-white text-on-surface p-8 rounded-xl h-full">
+<div class="text-primary font-bold mb-4">Development</div>
+<h3 class="font-headline-md text-headline-md mb-4">Secondary Section</h3>
+<p class="text-on-surface-variant mb-6">Grades 6 to 10. Intensive subject-specific learning and critical thinking.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Science &amp; Tech</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Advanced Math</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Leadership Prep</li>
+</ul>
+</div>
+</div>
+<div class="bg-primary-container p-1 rounded-2xl">
+<div class="bg-white text-on-surface p-8 rounded-xl h-full">
+<div class="text-primary font-bold mb-4">Specialization</div>
+<h3 class="font-headline-md text-headline-md mb-4">Higher Secondary</h3>
+<p class="text-on-surface-variant mb-6">Grades 11 to 12. Personalized career pathways and university preparation.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Board Exams</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Research Projects</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Career Guidance</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Departments -->
+<section class="py-section-gap px-margin-mobile max-w-container-max mx-auto reveal">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Our Specialized Departments</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-high cursor-pointer">
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-5xl mb-2">science</span>
+<h3 class="font-bold text-xl">Science</h3>
+</div>
+<div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+<p class="text-white text-sm">State-of-the-art physics, chemistry, and biology labs.</p>
+</div>
+</div>
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-high cursor-pointer">
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-5xl mb-2">payments</span>
+<h3 class="font-bold text-xl">Commerce</h3>
+</div>
+<div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+<p class="text-white text-sm">Focusing on business, economics, and finance.</p>
+</div>
+</div>
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-high cursor-pointer">
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-5xl mb-2">palette</span>
+<h3 class="font-bold text-xl">Arts</h3>
+</div>
+<div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+<p class="text-white text-sm">Cultivating creativity in visual arts and humanities.</p>
+</div>
+</div>
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-high cursor-pointer">
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-5xl mb-2">computer</span>
+<h3 class="font-bold text-xl">IT</h3>
+</div>
+<div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+<p class="text-white text-sm">Coding, robotics, and digital literacy labs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Admission Process -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile reveal">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Admission Process</h2>
+<div class="relative max-w-lg mx-auto">
+<div class="absolute left-1/2 h-full w-0.5 bg-outline-variant -translate-x-1/2"></div>
+<div class="space-y-12 relative">
+<div class="flex items-center justify-between w-full">
+<div class="w-[45%] text-right pr-4">
+<h4 class="font-bold text-primary">Inquiry</h4>
+<p class="text-sm">Submit your online form</p>
+</div>
+<div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center relative z-10 border-4 border-surface-container-low">1</div>
+<div class="w-[45%] pl-4"></div>
+</div>
+<div class="flex items-center justify-between w-full flex-row-reverse">
+<div class="w-[45%] text-left pl-4">
+<h4 class="font-bold text-primary">Assessment</h4>
+<p class="text-sm">Entrance test &amp; interview</p>
+</div>
+<div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center relative z-10 border-4 border-surface-container-low">2</div>
+<div class="w-[45%] pr-4"></div>
+</div>
+<div class="flex items-center justify-between w-full">
+<div class="w-[45%] text-right pr-4">
+<h4 class="font-bold text-primary">Selection</h4>
+<p class="text-sm">Review of results &amp; documents</p>
+</div>
+<div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center relative z-10 border-4 border-surface-container-low">3</div>
+<div class="w-[45%] pl-4"></div>
+</div>
+<div class="flex items-center justify-between w-full flex-row-reverse">
+<div class="w-[45%] text-left pl-4">
+<h4 class="font-bold text-primary">Registration</h4>
+<p class="text-sm">Fee payment &amp; onboarding</p>
+</div>
+<div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center relative z-10 border-4 border-surface-container-low">4</div>
+<div class="w-[45%] pr-4"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- School Facilities (Gallery Grid/Slider) -->
+<section class="py-section-gap px-margin-mobile reveal">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Our Facilities</h2>
+<div class="scroller flex overflow-x-auto gap-6 pb-8 snap-x">
+<div class="min-w-[300px] snap-center">
+<img alt="Library" class="w-full h-64 object-cover rounded-2xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Wo03nJzIZHmOr2BZ2dUeAL2s2Nxy4M18xwSC-NzNvevMpcUhdMbktNxspWQPxRiwLRJlpemarBgi40WaLnt9CfFJMfMGdlqEaFznca82JJPVwBqkaKKgc13PNxUkPCSqofHbr63ymJbWLmYOfTr2FWfhnzLfGZMCcwIHlfdsci-ws9-I9YCi4npZemXftxrOGT-Dd4Oh6rDVi8DOUw4MfjsNc5q1Dk4ay_IjN2W9ItKDr6Ox4W9WJp_b9lM__SzbOy7tQs3tuGU"/>
+<h3 class="font-bold text-xl">Modern Library</h3>
+</div>
+<div class="min-w-[300px] snap-center">
+<img alt="Computer Lab" class="w-full h-64 object-cover rounded-2xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChn2XOAUShEok0yeYqTcLHKnC_kcmwxcpLh1kUSBwZVx_rGbdCnQpbq9phTEMnJNu5viST8r3e0vwla8jX44pe2vP9at33HNcrKpLlLWcXQX_Q54R0yFjFvamRYBOQ7ws-aaCud1n0T2tbY2XdPHy5YHzbk2TPpvvViVNnf_X7aR4NRXAfBFWUoT6g_YP9VYdHELKFLsLeKlQePauU07TZV1fikBjSwA5uZhySgJ9JQ3rROdK-u_DMlO8U0iLCj0eodAwztSPir74"/>
+<h3 class="font-bold text-xl">High-Tech IT Lab</h3>
+</div>
+<div class="min-w-[300px] snap-center">
+<img alt="Science Lab" class="w-full h-64 object-cover rounded-2xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYOvQpDb1ctEjIe0x3RDYxTVveRGvdmzDe1e3ifZ8eY2jvBjhw-dsH78GbNNgmiLG7QXg7GLu5Wd2Yq1ADCJbfDq60IMhD3wVZxtqHKcTJ1Et-6jYZCpziqVQtMHMD3RQoYcd39qOXW60txMj2uuqMPEZKRT_XNAXwohQnCfXeNxPyOq3jx3PZzoGPAHbp15K0ZepUC5507DgHutnvkmS-wlYlGLz1Nx4LAKCr0kDTKREFcR6bnugrb9ydsebWqUb1rQ6CEQEExuU"/>
+<h3 class="font-bold text-xl">Advanced Science Lab</h3>
+</div>
+<div class="min-w-[300px] snap-center">
+<img alt="Playground" class="w-full h-64 object-cover rounded-2xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNt7POXnkaPswanZg40KeJ7-vCoReo31FCqQjp7pXER3k4eV3eE0nbxCCwSXXp5WlCaQohdY8gaNzOqxm1HRnRaCsoQndJxCDpE8pD-Fyf1qX1vZdrXPypNm0FyPDNzK3MEnPywJtH9Nbbda7bKmP3V9GD7HhrUC2buNE_fJH_RmIj_w83p0SCNvzQfvTbwvwlJiVAnkVELmxMfSlajWSnGSNoknq_eIFMqoLAt-OgwMPJrFofoffEwL2zw6yMgY3CEfHkDv-emVA"/>
+<h3 class="font-bold text-xl">Sports Grounds</h3>
+</div>
+<div class="min-w-[300px] snap-center">
+<img alt="Bus" class="w-full h-64 object-cover rounded-2xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOOV1B1N6wEPGOZKwsGTlbt-mQIHc41s55H6VDDP4h--lI86FMHNp-jY9l-U04ms5NQKzzAuqZyaZB_mAh7XytkFRywnETEwfjSwIr3smdeeQJ-kK_rmlmv92r4S1b5ll-f5Fft5qyzJ9Mep17NLJN22edgMh2BlTRFwRzTAuIpm4L3hqKm-XzPyzjZ81kxEHQrY-YcqYoDKTh8idMjzDflBHKmgepVhqUkMynlM78R5KcSCx5u9DlrN1-lPpBVhbjxlgCXsZPJ_Q"/>
+<h3 class="font-bold text-xl">Secure Transport</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Teachers Section -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile reveal">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Meet Our Faculty</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-6 rounded-2xl border border-outline-variant text-center card-lift transition-all">
+<div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a male teacher in his late 30s, wearing glasses and a formal shirt, smiling warmly in a bright classroom setting with soft natural lighting and a blue-toned background. High quality photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-rc0mualZ1d_CAbXUUgIYY5M2zKDeZ8hV4BhgW5oV_wLvnVnHg9W0eKN4Xls-9s0_CXp3uNzRyYO4GGxu7aNt6vVBlnFkJHvB92lZwq-988oOp6GAUIYShNskZ7cuQBx5Up4gzXzXCrhu-lMlLjB4sqXvxijkJ42OVu5ete6t97Xl14jJgbaOcKyM44X5friFMjUEjyw6NPy9mXvNYojGgus57uGxAtpSs1eVHE1g7ajdJ1bpOxW1vuDVhCeiIDag6JlCeuor26A"/>
+</div>
+<h3 class="font-headline-md mb-1">Mr. Julian Reed</h3>
+<p class="text-primary font-bold mb-4">Head of Mathematics</p>
+<p class="text-on-surface-variant text-sm">Passionate about making complex math concepts accessible and engaging for all students.</p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-outline-variant text-center card-lift transition-all">
+<div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a female science teacher in her 40s, wearing a white lab coat over professional attire, standing in a brightly lit modern laboratory, smiling confidently. The lighting is clean and high-key, reinforcing an academic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiCjltSEhFfLirltctohXl2fmnBRgworFLbCEnZ6j2yLrszgGDhoAqjziI2wYAbokpBkIjo0VS3Ue1aTLT2dd6W_Si1ZhflgCs6GbdisTCYkTGRolGFnjVUbkiD6coRsW6HH3jJXiDjzAqGwD4nOueLBX-4jsBQfe0LEpIXsyYZw-tOAGEh3FPY-EUYI6Ar1KfE_-KT0dpDcJ9s5smRD6dvzdiZscZzYn2QHq1MbaZtcH4xaCXFTq6SwK2tqAwalN_nGgt2JW7QRc"/>
+</div>
+<h3 class="font-headline-md mb-1">Dr. Sarah Chen</h3>
+<p class="text-primary font-bold mb-4">Senior Science Lead</p>
+<p class="text-on-surface-variant text-sm">Ph.D. in Physics with over 15 years of experience in research and academic excellence.</p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-outline-variant text-center card-lift transition-all">
+<div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="A portrait of a creative arts teacher, a woman in her late 20s with a cheerful expression, wearing a stylish scarf and holding a sketchbook, in a vibrant art studio with colorful paintings in the background. Soft warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-3W1gyEI4MtlSRAi3OvKY7iJ4Y2zgbw2wc7IiLlS2xS40Aul8cATTjouz8ZtNATDXDuYdbRzXY4lQNMA9eG7VqRsz64urCP-POQhqjEVQyt-bcZYRp-Ucstbdz7ZO1l0MnjBj_uRXkUclhDKiUcgcxcHl1HkyZOqZLjGlOHGp1gCPLcBGgz-9r8AD_GhUIEFI3bzQw344QGBLDKlhHz2JliWf0TwebtL5ixYPMNEC1t8eIJBBrrKUOhc_0YMYfVhbOdo-xC2Tqrk"/>
+</div>
+<h3 class="font-headline-md mb-1">Ms. Elena Vance</h3>
+<p class="text-primary font-bold mb-4">Creative Arts Faculty</p>
+<p class="text-on-surface-variant text-sm">Nurturing creative expression through various mediums and encouraging artistic innovation.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Student Achievements -->
+<section class="py-section-gap px-margin-mobile reveal">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Student Achievements</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex gap-4 p-6 bg-primary-container/10 rounded-2xl">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<div>
+<h4 class="font-bold text-lg">National Robotics Winners 2024</h4>
+<p class="text-on-surface-variant text-sm">Our senior team secured first place in the National STEM Championship held in Chicago.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 bg-secondary-container/10 rounded-2xl">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<div>
+<h4 class="font-bold text-lg">Inter-School Sports Trophy</h4>
+<p class="text-on-surface-variant text-sm">Victorious in the regional athletics meet for the third consecutive year.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery -->
+<section class="py-section-gap bg-surface px-margin-mobile reveal">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Campus Gallery</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="aspect-square rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Wide shot of the school's central courtyard with lush green lawns and modern architecture, vibrant blue sky, students congregating in small groups, sunny day, professional architectural photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeBoAzCCs8kAff9c3vC3uI_wAWwNQW4f-0LXe42Fb9d_lGaN7_UrzPuaXodhEbh4BUj-fiVjh_A3fhCitzWILv27JWvHVo2vbUHFGCux2fi3fabx4j3_oWicpoqfBmQwqgfAoUJ7DxfDQtEtzNlfBEOqSZp9XnogMUpGQV0W5w6AOxIiTKn7EVO6E_Lurkoiuw5dIok067HBo8Nzvy_KzpVeUPqzX72EdOQVu4qEkjg12nt7zR07CyeHhcutAgw-OPy0s32bSo9AQ"/>
+</div>
+<div class="aspect-video col-span-2 rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="High-angle shot of an indoor sports gymnasium with polished wooden floors, basketball hoops, and sunlight streaming through large windows. Clean, professional sports facility photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_jxWX5HlCL-jCe3qnC0o3IZ6IR-pb2tJpFqVi6WA7whNOlDVu9RTM8DLv8dXwpObdsOMH1n6401Qo7ksv8PeMmjxjGpTO6-zTV9YAu2lOs6o-lmK1Foz28SReBTFe3g4iO-VpNFNuxd8rDljtXqhtQwVs8ItNvCTRj452H5zzv16v2qSqbs_7vox5jNxQDkMrfkZ0Xcvw3YSmVC-8xVR82nhzqhNN1bDcAa8iDTVlXU9HJIyJLXHwghuWDSJtQr2iI36WzS9ySDw"/>
+</div>
+<div class="aspect-video col-span-2 rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Action shot of students performing a play on a school stage with professional theater lighting, colorful costumes, and an audience in the blurred foreground. Atmospheric and dynamic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Ko_zc4Vxg6arp8EwZctcFq_-ZiEnKEp9XYdAZgjlz8luVAfIHleREALBW18a7yf34JP7rRkW86PA3c0d74xx4difleOa4flX0Mu6FNs6TUHw6Rap274SoTQ9p-J5kTDq-85pTU8z0A-RIK_EF734jFgyEMEho4C8P1zLPlmbP_oZ6DtDgEatKo-O7pNSv6IxWaNiEp1d_687XwbyiK7hGwBhui6QQV1fXn5bqwC-HRM0nhDbJ-3oXhRxurOlG7c3E3Y4J94LpxE"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Detailed close-up of students working with a robot in a tech lab, focused expressions, glowing LEDs from the project, modern educational setting with primary blue and yellow highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDeMVUmkZl0nL3rIy086aew01dB-1L1F-jRV_k9jWNAQWMqHQJE11S00pYTx1m3a0Kt6UyPeLKFrv2btu9pBry0_vqU5LsnOu4GjveZpaU0SHPSAyb5BOh3Rtj7ZEceeeyHoC3MlaMS5yRqvGNAtDKTeAw15pYfBB_yIvUpO1srl0X2gc-kvYCCzHxKkaXvSb5DavV06rrHFTdJD73txLONgkwmWl8FjCmpMwOqerK6MtnLU_M2kLhcQpG2YMKhT57jTHWIoC6eeA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest News -->
+<section class="py-section-gap bg-surface-container-low px-margin-mobile">
+<div class="max-w-container-max mx-auto reveal">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Latest News &amp; Events</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<article class="bg-white rounded-2xl overflow-hidden border border-outline-variant group">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="A festive school event with decorations and a banner reading Annual Day 2024, happy students and parents in a brightly lit auditorium, warm and celebratory atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrj7eL4jng3XiGa3oCB-Ul7M_nP1kRm6Vl7EdzVXtpMzmN5TFcBuGDwFr-82GlPs1-E6pjCTu-YcTwCF5a1SLolBfF-pLtyDnzc1gugWsF_hK3dDpryT8IbyKiW_TaXHhX9CUjHqUlzPfeqILfuw5POh3bzgo04RdbVfErug99XPYrMZccJojcc2_HA2HcAoqvgOa3apAWoJVXo4R9dznXhMSjw3dGd-OiVOYIV3C9UWhWwVuTatVIeEcorYI3f_-aLLLNijGpZDw"/>
+</div>
+<div class="p-6">
+<span class="text-xs text-primary font-bold uppercase">Event | May 15</span>
+<h3 class="font-headline-md mt-2 mb-4 group-hover:text-primary transition-colors">Annual Day Celebration 2024</h3>
+<p class="text-on-surface-variant text-sm mb-4">A grand display of talent, culture, and academic recognition of our students.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-1" href="#">Read More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</article>
+<article class="bg-white rounded-2xl overflow-hidden border border-outline-variant group">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="A science fair display with colorful tri-fold boards and curious students interacting with scientific equipment, bright classroom setting, professional photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCffzUoYzIVzE2wnKi9EihIWmIpa5cc9UAekRMCdn56SDQf5-yExViU9DYR4ffxoGTwl1MkWxA3xQqbBdXSeQF0svfnZDSr5bnxvzqSUwTCDa4aJL0Xd9KlMiyiS0Re4Evebyajd98x27nhwoYcLGeDOHLZ3-aPgqmiAfUJZ6f-lMjX9BU0Fi4ThgR22e4qkkO0sD9SOn1Xj6zaOZqFGWvbecDHSs3NfF7vTE55rKIJOvwHr_pOxUpZ2DiUcVpucYH6R6yZ3NqZKnw"/>
+</div>
+<div class="p-6">
+<span class="text-xs text-primary font-bold uppercase">Academic | May 10</span>
+<h3 class="font-headline-md mt-2 mb-4 group-hover:text-primary transition-colors">STEM Fair Winners Announced</h3>
+<p class="text-on-surface-variant text-sm mb-4">Exploring innovation and creativity through student-led scientific projects.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-1" href="#">Read More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</article>
+<article class="bg-white rounded-2xl overflow-hidden border border-outline-variant group">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Students participating in a community service project, planting trees in a park, wearing school uniforms, bright sunny day, hopeful and active environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyJub1wcl54u3xhh1sdwqAkgwI918nhTZAzSHYJV8sgK5qQl19XTi2Shj4GxDi00Si4COuAqb_PVznEx-zekSRb2YV2Z_Vw823oV2B2JV0GrOqFsVUw7GkePa9egrasmS9u2P3lkTt-ECvnX_JsJKu07qwUC9idYNvPQUzPhNzmssddALx8adfdOMVY_5vn0ETn44Dl08bPFLQpjC25rHPenZJwy3Oosu-PGcyOo4L7zkaNCiBX8AGu5ETNSV4qq0plfpEURQ75PE"/>
+</div>
+<div class="p-6">
+<span class="text-xs text-primary font-bold uppercase">Community | May 01</span>
+<h3 class="font-headline-md mt-2 mb-4 group-hover:text-primary transition-colors">Green Campus Initiative</h3>
+<p class="text-on-surface-variant text-sm mb-4">Our commitment to sustainability through tree planting and waste reduction.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-1" href="#">Read More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap px-margin-mobile max-w-container-max mx-auto reveal">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Parents' Testimonials</h2>
+<div class="scroller flex overflow-x-auto gap-6 pb-4">
+<div class="min-w-[320px] bg-primary p-8 rounded-2xl text-white">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="mb-6 italic">"The personal attention my child receives is unparalleled. We've seen incredible growth in both academics and confidence."</p>
+<div>
+<p class="font-bold">Mrs. Sarah Jenkins</p>
+<p class="text-primary-fixed text-sm">Parent of Grade 5 Student</p>
+</div>
+</div>
+<div class="min-w-[320px] bg-surface-container p-8 rounded-2xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="mb-6 italic text-on-surface-variant">"The facilities are world-class. From the labs to the sports fields, everything is designed for excellence."</p>
+<div>
+<p class="font-bold text-on-surface">Mr. David Kolar</p>
+<p class="text-on-surface-variant text-sm">Parent of Grade 10 Student</p>
+</div>
+</div>
+<div class="min-w-[320px] bg-primary p-8 rounded-2xl text-white">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="mb-6 italic">"Academic Institution has truly lived up to its name. My son is now preparing for Ivy League universities thanks to the guidance here."</p>
+<div>
+<p class="font-bold">Mrs. Linda Thompson</p>
+<p class="text-primary-fixed text-sm">Parent of Alumni</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-section-gap bg-surface-container-low px-margin-mobile">
+<div class="max-w-2xl mx-auto reveal">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<details class="bg-white rounded-xl border border-outline-variant p-4 group">
+<summary class="font-bold cursor-pointer list-none flex justify-between items-center text-primary">
+                        How can I apply for admission?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant text-sm">You can apply online through our 'Apply Now' portal or visit the campus office for a physical application form. Ensure you have the required documents ready.</p>
+</details>
+<details class="bg-white rounded-xl border border-outline-variant p-4 group">
+<summary class="font-bold cursor-pointer list-none flex justify-between items-center text-primary">
+                        What is the student-teacher ratio?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant text-sm">We maintain a healthy 15:1 student-teacher ratio to ensure personalized attention and effective learning outcomes for every student.</p>
+</details>
+<details class="bg-white rounded-xl border border-outline-variant p-4 group">
+<summary class="font-bold cursor-pointer list-none flex justify-between items-center text-primary">
+                        Are extracurricular activities mandatory?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant text-sm">While not strictly mandatory for passing, we highly encourage all students to participate in at least one club or sport for holistic development.</p>
+</details>
+<details class="bg-white rounded-xl border border-outline-variant p-4 group">
+<summary class="font-bold cursor-pointer list-none flex justify-between items-center text-primary">
+                        Do you provide transport facilities?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant text-sm">Yes, we have a fleet of air-conditioned, GPS-tracked buses covering all major parts of the city with trained attendants.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-mobile max-w-container-max mx-auto reveal">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Get in Touch</h2>
+<p class="text-on-surface-variant mb-8">Have questions about our curriculum or admission process? Our team is here to help you.</p>
+<div class="space-y-6 mb-8">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-lg">location_on</span>
+<div>
+<p class="font-bold">Campus Address</p>
+<p class="text-sm text-on-surface-variant">123 Education Excellence Way, Academic District, NY 10001</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-lg">mail</span>
+<div>
+<p class="font-bold">Email Us</p>
+<p class="text-sm text-on-surface-variant">admissions@academicinstitution.edu</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-lg">call</span>
+<div>
+<p class="font-bold">Call Us</p>
+<p class="text-sm text-on-surface-variant">+1 (555) 0123-4567</p>
+</div>
+</div>
+</div>
+<div class="h-64 bg-surface-container rounded-2xl flex items-center justify-center relative overflow-hidden" data-location="New York" style="">
+<span class="material-symbols-outlined text-6xl text-primary/30 z-0">map</span>
+<p class="absolute bottom-4 left-4 bg-white/90 px-4 py-2 rounded-lg text-xs font-bold shadow-sm">View on Interactive Map</p>
+</div>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-outline-variant shadow-sm">
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-bold mb-1">Full Name</label>
+<input class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary" placeholder="Enter your name" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold mb-1">Email Address</label>
+<input class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary" placeholder="name@example.com" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-bold mb-1">Subject</label>
+<select class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary">
+<option>Admissions Inquiry</option>
+<option>Employment Opportunity</option>
+<option>General Feedback</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold mb-1">Message</label>
+<textarea class="w-full border-outline-variant rounded-lg p-3 h-32 focus:ring-primary focus:border-primary" placeholder="How can we help?"></textarea>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-primary-container transition-all" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="bg-secondary-container py-12 px-margin-mobile">
+<div class="max-w-2xl mx-auto text-center reveal">
+<h2 class="font-headline-md text-on-secondary-container mb-4">Stay Updated with Our Newsletter</h2>
+<p class="text-on-secondary-container/80 mb-6">Receive the latest news, event updates, and educational insights directly in your inbox.</p>
+<form class="flex flex-col sm:flex-row gap-2">
+<input class="flex-grow border-none rounded-lg p-4 focus:ring-primary" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:scale-[1.02] active:scale-95 transition-all">Subscribe</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full pt-20 pb-8 border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Academic Institution</span>
+</div>
+<p class="text-on-surface-variant text-sm">Empowering minds and shaping futures since 1995. A community dedicated to global excellence.</p>
+</div>
+<div>
+<h4 class="font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Programs</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Admissions</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Campus Life</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Faculty</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Support</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Social Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">share_reviews</span></a>
+<a class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">video_library</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile text-center pt-8 border-t border-outline-variant">
+<p class="text-on-surface-variant text-sm">© 2024 Academic Institution. All Rights Reserved.</p>
+</div>
+</footer>
 <script src="school.js"></script>
-</body>
-</html>
+</body></html>
