@@ -8,6 +8,43 @@
 body{
     background: #f5f7fa;
 }
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid var(--faint);
+}
+
+.nav-logo {
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.nav-cta {
+  text-decoration: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
 
 .courses{
     padding: 80px 10%;
