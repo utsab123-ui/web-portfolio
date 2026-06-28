@@ -9,6 +9,43 @@ body{
     background: linear-gradient(135deg, #0f172a, #1e293b);
     min-height: 100vh;
 }
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid var(--faint);
+}
+
+.nav-logo {
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.nav-cta {
+  text-decoration: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
 
 .about{
     display: flex;
