@@ -58,6 +58,11 @@ nav {
   border-radius: 30px;
 }
 
+img {
+  height: 800px;
+  width: auto;
+}
+
 /* HERO */
 .hero {
   min-height: 100vh;
