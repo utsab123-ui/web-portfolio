@@ -1,0 +1,471 @@
+<html class="scroll-smooth" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   MedPulse - Modern Healthcare
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+ <link rel="stylesheet" href="hospital.css">
+</head>
+ <body class="text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopAppBar -->
+  <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/20 shadow-sm flex justify-between items-center px-container-margin h-16">
+   <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">
+     medical_services
+    </span>
+    <span class="text-headline-md font-headline-md font-bold text-primary">
+     MedPulse
+    </span>
+   </div>
+   <div class="hidden md:flex gap-8 items-center font-label-md text-label-md">
+    <a class="text-primary font-bold" href="#">
+     Home
+    </a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+     Bookings
+    </a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+     Portal
+    </a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+     Contact
+    </a>
+   </div>
+   <button class="bg-error text-on-error px-4 py-2 rounded-full font-label-md text-label-md hover:scale-95 transition-all">
+    EMERGENCY
+   </button>
+  </header>
+  <main class="pt-16 pb-24">
+   <!-- Hero Section -->
+   <section class="relative min-h-[751px] flex items-center overflow-hidden px-container-margin lg:px-xl">
+    <!-- 3D Heart Animation Background -->
+    <div class="absolute inset-0 z-0 opacity-40 md:opacity-100 md:-right-1/4 lg:right-0">
+     <!-- STITCH_THREEJS_START:ANIMATION_2 class="absolute inset-0 w-full h-full" -->
+     <div class="absolute inset-0 w-full h-full" style="display:block;">
+      <div id="threejs-container-ANIMATION_2" style="width:100%;height:100%">
+      </div>
+     </div>
+     <!-- STITCH_THREEJS_END:ANIMATION_2 -->
+    </div>
+    <div class="relative z-10 max-w-2xl">
+     <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/10 text-primary rounded-full mb-6 border border-primary/20">
+      <span class="material-symbols-outlined text-[18px]">
+       verified_user
+      </span>
+      <span class="font-label-sm text-label-sm">
+       ISO 9001 Certified Healthcare
+      </span>
+     </div>
+     <h1 class="font-headline-xl text-headline-xl md:text-6xl mb-6 text-on-background leading-tight">
+      Your Health,
+      <br/>
+      <span class="text-primary">
+       Our Priority
+      </span>
+     </h1>
+     <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+      Experience world-class healthcare with state-of-the-art technology and compassionate care from the nation's leading medical specialists.
+     </p>
+     <div class="flex flex-wrap gap-4">
+      <button class="px-8 py-4 bg-primary text-on-primary rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform">
+       Book Appointment
+      </button>
+      <button class="px-8 py-4 bg-surface/80 backdrop-blur-md border border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary/5 transition-colors">
+       Emergency Contact
+      </button>
+     </div>
+     <!-- Stats: Floating Cards -->
+     <div class="mt-16 flex flex-wrap gap-6">
+      <div class="glass-card p-6 rounded-2xl flex items-center gap-4 animate-float shadow-sm" style="animation-delay: 0s">
+       <div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center">
+        <span class="material-symbols-outlined text-secondary">
+         groups
+        </span>
+       </div>
+       <div>
+        <div class="font-headline-md text-headline-md text-primary">
+         50+
+        </div>
+        <div class="font-label-sm text-label-sm text-outline">
+         Expert Doctors
+        </div>
+       </div>
+      </div>
+      <div class="glass-card p-6 rounded-2xl flex items-center gap-4 animate-float shadow-sm" style="animation-delay: 1.5s">
+       <div class="w-12 h-12 rounded-full bg-tertiary-fixed/40 flex items-center justify-center">
+        <span class="material-symbols-outlined text-tertiary">
+         patient_list
+        </span>
+       </div>
+       <div>
+        <div class="font-headline-md text-headline-md text-primary">
+         100k+
+        </div>
+        <div class="font-label-sm text-label-sm text-outline">
+         Happy Patients
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Departments Bento Grid -->
+   <section class="py-xl px-container-margin lg:px-xl bg-surface-container-lowest">
+    <div class="max-w-7xl mx-auto">
+     <div class="mb-12 text-center">
+      <h2 class="font-headline-lg text-headline-lg mb-2">
+       Specialized Departments
+      </h2>
+      <p class="font-body-md text-body-md text-on-surface-variant">
+       Precision medicine tailored to your specific needs.
+      </p>
+     </div>
+     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Cardiology -->
+      <div class="glass-card p-8 rounded-3xl group hover:bg-primary hover:text-on-primary transition-all duration-300">
+       <div class="w-14 h-14 bg-error-container/30 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
+        <span class="material-symbols-outlined text-error text-3xl group-hover:text-white" style="font-variation-settings: 'FILL' 1;">
+         cardiology
+        </span>
+       </div>
+       <h3 class="font-headline-md text-headline-md mb-3">
+        Cardiology
+       </h3>
+       <p class="font-body-md text-body-md text-on-surface-variant group-hover:text-white/80">
+        Advanced heart care including diagnostics and surgery.
+       </p>
+      </div>
+      <!-- Neurology -->
+      <div class="glass-card p-8 rounded-3xl group hover:bg-primary hover:text-on-primary transition-all duration-300">
+       <div class="w-14 h-14 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
+        <span class="material-symbols-outlined text-primary text-3xl group-hover:text-white" style="font-variation-settings: 'FILL' 1;">
+         neurology
+        </span>
+       </div>
+       <h3 class="font-headline-md text-headline-md mb-3">
+        Neurology
+       </h3>
+       <p class="font-body-md text-body-md text-on-surface-variant group-hover:text-white/80">
+        Specialized treatment for brain and nervous system health.
+       </p>
+      </div>
+      <!-- Pediatrics -->
+      <div class="glass-card p-8 rounded-3xl group hover:bg-primary hover:text-on-primary transition-all duration-300">
+       <div class="w-14 h-14 bg-secondary-container/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
+        <span class="material-symbols-outlined text-secondary text-3xl group-hover:text-white" style="font-variation-settings: 'FILL' 1;">
+         child_care
+        </span>
+       </div>
+       <h3 class="font-headline-md text-headline-md mb-3">
+        Pediatrics
+       </h3>
+       <p class="font-body-md text-body-md text-on-surface-variant group-hover:text-white/80">
+        Compassionate healthcare for our youngest patients.
+       </p>
+      </div>
+      <!-- Orthopedics -->
+      <div class="glass-card p-8 rounded-3xl group hover:bg-primary hover:text-on-primary transition-all duration-300">
+       <div class="w-14 h-14 bg-tertiary-fixed/30 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
+        <span class="material-symbols-outlined text-tertiary text-3xl group-hover:text-white" style="font-variation-settings: 'FILL' 1;">
+         done
+        </span>
+       </div>
+       <h3 class="font-headline-md text-headline-md mb-3">
+        Orthopedics
+       </h3>
+       <p class="font-body-md text-body-md text-on-surface-variant group-hover:text-white/80">
+        Bone and joint care with the latest recovery techniques.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Emergency Section -->
+   <section class="py-xl px-container-margin lg:px-xl">
+    <div class="max-w-7xl mx-auto rounded-[2.5rem] overflow-hidden relative bg-error-container text-on-error-container">
+     <div class="absolute right-0 top-0 w-1/3 h-full hidden lg:block opacity-20">
+      <span class="material-symbols-outlined text-[300px] absolute -right-20 -top-20">
+       emergency
+      </span>
+     </div>
+     <div class="p-10 md:p-16 relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div class="max-w-2xl">
+       <div class="inline-block px-4 py-1 bg-error text-on-error rounded-full font-label-md text-label-md mb-6 uppercase tracking-wider">
+        24/7 Emergency Service
+       </div>
+       <h2 class="font-headline-xl text-headline-xl md:text-5xl mb-6">
+        Need Immediate Help?
+       </h2>
+       <p class="font-body-lg text-body-lg mb-8 text-on-error-container/80">
+        Our trauma center and ambulance fleet are ready 24/7. Average response time is under 8 minutes across the city.
+       </p>
+       <div class="flex items-center gap-6">
+        <button class="bg-error text-on-error px-10 py-5 rounded-2xl font-headline-md text-headline-md flex items-center gap-3 hover:shadow-2xl hover:shadow-error/40 transition-all active:scale-95">
+         <span class="material-symbols-outlined">
+          call
+         </span>
+         Call Now: 911
+        </button>
+       </div>
+      </div>
+      <div class="glass-card p-6 rounded-3xl border-error/20 bg-white/40">
+       <div class="space-y-4">
+        <div class="flex items-start gap-4">
+         <span class="material-symbols-outlined text-error mt-1">
+          location_on
+         </span>
+         <div>
+          <div class="font-label-md text-label-md font-bold">
+           Main Hospital Location
+          </div>
+          <div class="font-body-md text-body-md">
+           123 Medical Drive, Tech City
+          </div>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <span class="material-symbols-outlined text-error mt-1">
+          airport_shuttle
+         </span>
+         <div>
+          <div class="font-label-md text-label-md font-bold">
+           Ambulance ETA
+          </div>
+          <div class="font-body-md text-body-md">
+           Real-time tracking available
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Doctors Search & Preview -->
+   <section class="py-xl px-container-margin lg:px-xl">
+    <div class="max-w-7xl mx-auto">
+     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div>
+       <h2 class="font-headline-lg text-headline-lg mb-2">
+        Find a Specialist
+       </h2>
+       <p class="font-body-md text-body-md text-on-surface-variant">
+        Search through our database of world-class doctors.
+       </p>
+      </div>
+      <div class="relative w-full md:w-96">
+       <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">
+        search
+       </span>
+       <input class="w-full pl-12 pr-4 py-4 rounded-2xl border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search doctor, specialty..." type="text"/>
+      </div>
+     </div>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Doctor 1 -->
+      <div class="glass-card rounded-3xl overflow-hidden group">
+       <div class="h-64 relative overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional portrait of a male doctor in a crisp white lab coat, standing in a clean, brightly lit modern medical facility. He has a warm, confident smile and is wearing a stethoscope around his neck. The background features soft bokeh of medical monitors and a minimalist hospital interior in shades of light blue and white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrgAOGJxZKa7wUl_H0sYhujyt0WnwR2ZToxUwzybF7gulkJc-Bh-5xsQXTlMa39c-gTQkk2Y2iRnZf6y_yvEethUhsFeHKy6RGfrtQ6uG9eHS-T7fazLWclO7kTNtMNgDlngyy0XuQxbfPzJQM2LagTrPTvvA5fgHfaxp-qqH-078EP4aqcagys44dv2RkdiNoJgZcaNgMyMOH7N705J6TG_5HHTYGK9tfBuyL884dHuD8aFlx9p0ora6tT-FtZ2hORYhjvR-2foA"/>
+        <div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-label-sm font-label-sm text-primary border border-primary/20">
+         Cardiology
+        </div>
+       </div>
+       <div class="p-6">
+        <h4 class="font-headline-md text-headline-md mb-1">
+         Dr. James Wilson
+        </h4>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+         MBBS, MD - Senior Cardiologist
+        </p>
+        <div class="flex items-center justify-between">
+         <div class="flex items-center gap-1">
+          <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">
+           star
+          </span>
+          <span class="font-label-md text-label-md">
+           4.9 (120 Reviews)
+          </span>
+         </div>
+         <button class="text-primary font-label-md text-label-md flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+          View Profile
+          <span class="material-symbols-outlined">
+           chevron_right
+          </span>
+         </button>
+        </div>
+       </div>
+      </div>
+      <!-- Doctor 2 -->
+      <div class="glass-card rounded-3xl overflow-hidden group">
+       <div class="h-64 relative overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional portrait of a female neurologist with a friendly and empathetic expression. She is wearing a modern teal medical uniform in a high-end medical office. Soft natural light illuminates her face from a large window, creating a serene and professional atmosphere. The interior is decorated with subtle glass partitions and minimalist furniture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNbWnUgVkbZGJN2N64yvHw2MTEFVk78ORzhjfOqx7sFklw94CQ0QP4RtwiaNTK-SD3Bs7VeeqOqJj-LmmZQeGf8vU15z1pctGd3JUvsU2SJHc-NyAPXmjV6uYORmv6JPZtCXfQM67QjvPqc8GHZWPFy1_oei-F3rmKIYUzYnzc4YSXVYPm1uaY8ehEvEXh3EJrpBuzsBlyCqcDruBCvKOXH45BIXrM5C2lX3PGktOB3rXfQdpRf9ChoVRurH4KjZGlupQmk7XSO_w"/>
+        <div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-label-sm font-label-sm text-primary border border-primary/20">
+         Neurology
+        </div>
+       </div>
+       <div class="p-6">
+        <h4 class="font-headline-md text-headline-md mb-1">
+         Dr. Sarah Chen
+        </h4>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+         MD, PhD - Neurosurgeon
+        </p>
+        <div class="flex items-center justify-between">
+         <div class="flex items-center gap-1">
+          <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">
+           star
+          </span>
+          <span class="font-label-md text-label-md">
+           5.0 (85 Reviews)
+          </span>
+         </div>
+         <button class="text-primary font-label-md text-label-md flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+          View Profile
+          <span class="material-symbols-outlined">
+           chevron_right
+          </span>
+         </button>
+        </div>
+       </div>
+      </div>
+      <!-- Doctor 3 -->
+      <div class="glass-card rounded-3xl overflow-hidden group">
+       <div class="h-64 relative overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional medical headshot of a mature doctor with a kind and reassuring smile. He is in a brightly lit pediatric ward with colorful, soft-focus child-friendly murals in the background. He wears a dark blue medical coat and a colorful stethoscope. The lighting is warm and welcoming, reflecting a child-friendly healthcare environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWfzTlZvN_s2p9rc-xNGlSXV9zxOrph4HWJraXGBWnzwsWslFLk2OGhmiqft47qYSOy5jEYQUzDsvEMp5EllV3D6QFTZMwKafz9MzqoKHxPdrs5goVWgypqp9L2Fk98Q_ZP8aY0FIZWS5eUoAXYXIUVzvXd8BcDM4NW1baIF2_JrxygBGOe08LexonWwfDYRLeVFM0kgBS03L-dge99rkC54qdNv3g3BMxTmRKXCzoY4dvzBfq5rfVWTv51FOmg-MXRpL8XRTNiqA"/>
+        <div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-label-sm font-label-sm text-primary border border-primary/20">
+         Pediatrics
+        </div>
+       </div>
+       <div class="p-6">
+        <h4 class="font-headline-md text-headline-md mb-1">
+         Dr. Robert Miller
+        </h4>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+         MD - Pediatric Specialist
+        </p>
+        <div class="flex items-center justify-between">
+         <div class="flex items-center gap-1">
+          <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">
+           star
+          </span>
+          <span class="font-label-md text-label-md">
+           4.8 (210 Reviews)
+          </span>
+         </div>
+         <button class="text-primary font-label-md text-label-md flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+          View Profile
+          <span class="material-symbols-outlined">
+           chevron_right
+          </span>
+         </button>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Testimonials -->
+   <section class="py-xl px-container-margin lg:px-xl bg-primary/5">
+    <div class="max-w-4xl mx-auto text-center">
+     <h2 class="font-headline-lg text-headline-lg mb-12">
+      Patient Testimonials
+     </h2>
+     <div class="relative px-6">
+      <div class="glass-card p-10 rounded-[2rem] shadow-xl relative overflow-hidden">
+       <span class="material-symbols-outlined text-primary/10 text-8xl absolute -top-4 -left-4">
+        format_quote
+       </span>
+       <div class="relative z-10">
+        <p class="font-body-lg text-body-lg italic mb-8 leading-relaxed">
+         "The level of care I received at MedPulse was exceptional. The cardiologists were incredibly thorough, and the glass-walled facilities made me feel like I was in the future of healthcare. Truly grateful for the team."
+        </p>
+        <div class="flex flex-col items-center">
+         <div class="w-20 h-20 rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg">
+          <img class="w-full h-full object-cover" data-alt="A portrait of a smiling middle-aged woman looking healthy and vibrant. She is outdoors in a beautiful garden with soft, natural sunlight highlighting her face. Her expression is one of genuine gratitude and joy, embodying a successful medical recovery. The aesthetic is clean, bright, and full of life." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN21cHuMAPrsx4dk9DILtipf9QFrnKqX-KYV6mdfSvwpTJ1n0pV480ec4oua_FvXzKdZkkTENCsPOWgnAmXhzq_mmnzjAXhRGuMbfnDYcHb73cmzMVeoPDPZBnAsFS1FMz3_Fa3bA69BqT60PSMnLzXhfn4FOewBK7HjuQI0E6yLcYNREI0EmJF411otwZ8k11HcXxW4j-RPfSki0cTTzCLs7QSw4k2J9yo5cwceAzAfgRZFFRSsbqxsPeMsKKrWvi6Mgxl9IbU4U"/>
+         </div>
+         <div class="font-label-md text-label-md font-bold">
+          Elena Rodriguez
+         </div>
+         <div class="font-label-sm text-label-sm text-outline">
+          Heart Surgery Patient
+         </div>
+         <div class="flex gap-1 mt-2">
+          <span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">
+           star
+          </span>
+          <span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">
+           star
+          </span>
+          <span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">
+           star
+          </span>
+          <span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">
+           star
+          </span>
+          <span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">
+           star
+          </span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- Navigation Dots -->
+      <div class="flex justify-center gap-2 mt-8">
+       <div class="w-3 h-3 rounded-full bg-primary">
+       </div>
+       <div class="w-3 h-3 rounded-full bg-outline-variant">
+       </div>
+       <div class="w-3 h-3 rounded-full bg-outline-variant">
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- BottomNavBar (Visible on Mobile) -->
+  <nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface/80 backdrop-blur-xl border-t border-white/20 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] flex justify-around items-center h-20 px-4 pb-2">
+   <a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1" href="#">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">
+     home
+    </span>
+    <span class="font-label-sm text-label-sm">
+     Home
+    </span>
+   </a>
+   <a class="flex flex-col items-center justify-center text-outline hover:text-primary transition-colors" href="#">
+    <span class="material-symbols-outlined">
+     event
+    </span>
+    <span class="font-label-sm text-label-sm">
+     Bookings
+    </span>
+   </a>
+   <a class="flex flex-col items-center justify-center text-outline hover:text-primary transition-colors" href="#">
+    <span class="material-symbols-outlined">
+     account_circle
+    </span>
+    <span class="font-label-sm text-label-sm">
+     Portal
+    </span>
+   </a>
+   <a class="flex flex-col items-center justify-center text-outline hover:text-primary transition-colors" href="#">
+    <span class="material-symbols-outlined">
+     support_agent
+    </span>
+    <span class="font-label-sm text-label-sm">
+     Contact
+    </span>
+   </a>
+  </nav>
+  <!-- FAB (Suppressed on Home according to logic, but often used for 'Quick Appointment' in health apps) -->
+  <button class="fixed bottom-24 right-container-margin w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center z-40 md:bottom-10 active:scale-90 transition-transform">
+   <span class="material-symbols-outlined text-3xl">
+    add
+   </span>
+  </button>
+  <script src="hospital.js"></script>
+ </body>
+</html>
